@@ -1,63 +1,66 @@
+/* Selects all elements on page */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;                  /* No margin for entire page */
+    padding: 0;                 /* Same with padding */
+    box-sizing: border-box;     /* Include padding and border in pages total width and height */
 }
 
 html {
-    font: normal 16px sans-serif;
-    color: #555;
+    font: normal 16px sans-serif;   /* Set font details for entire page */
+    color: #555;                  /* Set font color for entire page */
 }
 
 nav {
-    list-style: none;
+    list-style: none;         /* Remove bullets from Nav list */
 }
 
 a {
-    text-decoration: none;
-    opacity: 0.75;
-    color: #fff;
+    text-decoration: none;  /* Remove default underline for list element */
+    opacity: 0.75;          /* Enhance opacity to blend with hero picture */
+    color: #fff;          /* Set darker font color */ 
 }
 
 a:hover {
-    opacity: 1;
+    opacity: 1;     /* Decrease opacity of nav link on hover */
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px 80px;
+    display: flex;              /* Add flexbox to all section containers */
+    flex-direction: column;     /* Change each to column format */
+    align-items: center;        /* Align items to center on cross-axis */
+    padding: 100px 80px;        /* Top/Bottom padding: 100px, Left/Right padding: 80px */
 }
 
 section p {
-    max-width: 775px;
-    line-height: 2;
-    padding: 0 20px;
-    margin-bottom: 30px;
-    text-align: center;
+    max-width: 775px;           /* Max width of 775px for all paragraphs nested inside of sections */
+    line-height: 2;             /* Specifies the space in between paragraph lines */
+    padding: 0 20px;            /* No padding on top/bottom, 20px left/right */
+    margin-bottom: 30px;        
+    text-align: center;         /* Align text to center within paragraph */
 }
 
 section h3.title {
-    text-transform: capitalize;
-    font: bold 32px "Open Sans", sans-serif;
-    margin-bottom: 30px;
-    text-align: center;
+    text-transform: capitalize;                 /* Auto capitalize text in title class */
+    font: bold 32px "Open Sans", sans-serif;    /* Bold text at 32px with font options */
+    margin-bottom: 30px;                        /* Same as above margin explanation */
+    text-align: center;                         
 }
 
+/* Characteristics given to all even sections not with a hero class */
 section:not(.hero):nth-child(even) {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5;          /* Change background color of section for harder transition */
 }
+
 hr {
-    width: 250px;
-    height: 3px;
-    background-color: #3f51b5;
+    width: 250px;                       /* Set width of section break */
+    height: 3px;                        
+    background-color: #3f51b5;          
     border: 0;
     margin-bottom: 50px;
 }
 
 ul {
-    list-style: none;
+    list-style: none;                   /* Remove any styling from list elements */
 }
 
 .btn {
@@ -69,19 +72,15 @@ ul {
     opacity: 1;
 }
 
-.grid {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.grid {         
+    width: 100%;                    /* Consume 100% of container */
+    display: flex;                  /* Add flexbox to grid class */
+    flex-wrap: wrap;                /* Wrap elements to keep them in container, will move to second row */
+    justify-content: center;        /* Center the content inside of flexbox */
 }
 
 
-@media (max-width: 800px) {
-    section {
-        padding: 50px 20px;
-    }
-}
+
 /* Header Styles */
 
 header {
@@ -96,11 +95,6 @@ header {
     color: #fff;
 }
 
-@keyframes fadein {
-    100% {
-        opacity: 1;
-    }
-}
 
 header h2 {
     font-family: "Quicksand", sans-serif;
@@ -113,16 +107,6 @@ header nav {
 
 header nav li {
     margin: 0 15px;
-}
-
-@media (max-width: 800px) {
-    header {
-        padding: 20px 50px;
-        flex-direction: column;
-    }
-    header h2 {
-        margin-bottom: 15px;
-    }
 }
 
 /* Hero Styles */
@@ -165,31 +149,6 @@ header nav li {
     animation: 1s slidefade 1s forwards;
 }
 
-@keyframes slidefade {
-    100% {
-        opacity: 1;
-        margin: 0;
-    }
-}
-
-@media (max-width: 800px) {
-    .hero {
-        min-height: 600px;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-    }
-
-    .hero h3 {
-        font-size: 24px;
-    }
-
-    .hero a.btn {
-        padding: 15px 40px;
-    }
-}
-
 
 /* Destinations Section */
 
@@ -209,20 +168,6 @@ header nav li {
     flex-basis: 70%;
 }
 
-@media (max-width: 1100px) {
-    .destinations .grid li.small,
-    .destinations .grid li.large {
-        flex-basis: 50%;
-    }
-}
-
-@media (max-width: 800px) {
-    .destinations .grid li.small,
-    .destinations .grid li.large {
-        flex-basis: 100%;
-    }
-}
-
 /* Packages Section */
 .packages .grid li {
     padding: 50px;
@@ -239,13 +184,6 @@ header nav li {
     margin: 25px 0;
 }
 
-@media (max-width: 800px) {
-    .packages .grid li {
-        flex-basis: 100%;
-        padding: 20px;
-    }
-}
-
 /* Testimonials */
 .testimonials .quote {
     font-size: 22px;
@@ -254,16 +192,6 @@ header nav li {
     margin: 40px 0 25px;
 }
 
-@media (max-width: 800px) {
-    .testimonials .quote {
-        font-size: 18px;
-        margin: 15px 0;
-    }
-
-    .testimonials .author {
-        font-size: 14px;
-    }
-}
 
 /* Contact Section */
 .contact form {
@@ -286,12 +214,6 @@ header nav li {
     flex: 1;
 }
 
-@media (max-width: 1000px) {
-    .contact form input {
-        flex-basis: 100%;
-        margin: 0 0 20px;
-    }
-}
 
 /* Footer */
 footer {
@@ -318,6 +240,7 @@ footer p {
     align-self: center;
 }
 
+/* Media Queries */
 @media (max-width: 1100px) {
     footer {
         flex-direction: column;
@@ -329,5 +252,93 @@ footer p {
 
     footer ul li {
         margin: 0 8x;
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contact form input {
+        flex-basis: 100%;
+        margin: 0 0 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .testimonials .quote {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .testimonials .author {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .packages .grid li {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h3 {
+        font-size: 24px;
+    }
+
+    .hero a.btn {
+        padding: 15px 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+    header h2 {
+        margin-bottom: 15px;
+    }
+}
+
+/* Keyframes */
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin: 0;
     }
 }
