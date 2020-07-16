@@ -82,16 +82,15 @@ ul {
 
 
 /* Header Styles */
-
 header {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: absolute;                     /* Positioned relative to the nearested positioned ancestor */
+    width: 100%;                            /* Fill entire container */
+    display: flex;                          /* Add flexbox */
+    justify-content: space-between;         /* Space out content with space in the middle */
+    align-items: center;                    /* Center items along cross axis */
     padding: 35px 100px 0;
     opacity: 0;
-    animation: 1s fadein 0.5s forwards;
+    animation: 1s fadein 0.5s forwards;     /* Animate with fadein animation defined in keyframes section */
     color: #fff;
 }
 
@@ -106,7 +105,7 @@ header nav {
 }
 
 header nav li {
-    margin: 0 15px;
+    margin: 0 15px;         /* No margin top/bottom, 15px margin left/right */
 }
 
 /* Hero Styles */
